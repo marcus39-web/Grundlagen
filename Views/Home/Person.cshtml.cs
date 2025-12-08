@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace Grundlagen.Views.Shared
+namespace Grundlagen.Views.Home
 {
-    public class _PlaceCardModel : PageModel
+    public class Person_Model : PageModel
     {
         public void OnGet()
         {

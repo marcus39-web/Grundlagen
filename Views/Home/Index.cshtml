@@ -1,15 +1,15 @@
-﻿@model IEnummerable<WebSite.Models.PlacesModel>
+﻿@model IEnumerable<Grundlagen.Models.PlacesModel>
 @{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+<div class="page-title">
+    <PageTitle>Urlaubsorte</PageTitle>
 </div>
 
-<div class="place-colums">
+<div class="place-columns">
     @foreach (var item in Model)
     {
-        Html.Partial("_PlaceCard", item);    
+        @Html.Partial("_PlaceCard", item);
     }
 </div>

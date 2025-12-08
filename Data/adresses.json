@@ -1,0 +1,42 @@
+[
+  {
+    "PersID": 0,
+    "LastName": "Max",
+    "FirstName": "Moritz",
+    "Birthday": "1970-03-04",
+    "Gender": "m",
+    "AdressId": 0,
+    "Address": {
+      "AdressId": 0,
+      "City": "Erfurt",
+      "Zip": "99084",
+      "Street": "Maximilian-Welsch-Str.",
+      "No": "2a",
+      "FedId": 16,
+      "FedState": {
+        "FedId": 16,
+        "FedName": "Thueringen"
+      }
+    }
+  },
+  {
+    "PersID": 0,
+    "LastName": "Meier",
+    "FirstName": "Annette",
+    "Birthday": "1974-08-06",
+    "Gender": "w",
+    "AdressId": 0,
+    "Address": {
+      "AdressId": 0,
+      "City": "Jena",
+      "Zip": "99084",
+      "Street": "Loebstedter-Str.",
+      "No": "116",
+      "FedId": 16,
+      "FedState": {
+        "FedId": 16,
+        "FedName": "Thueringen"
+      }
+    }
+  }
+]

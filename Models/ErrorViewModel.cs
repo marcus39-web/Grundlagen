@@ -1,4 +1,4 @@
-namespace C_Grundlagen.Models
+namespace Grundlagen.Models
 {
     public class ErrorViewModel
     {

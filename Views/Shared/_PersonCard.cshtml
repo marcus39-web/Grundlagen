@@ -1,0 +1,13 @@
+﻿@model Grundlagen.Models.PersonModel
+
+<div,class="card">
+    <div class="container" titel="@Model.FirstName @Model.LastName">
+        <div class="card-description">
+            @Model.FirstName @Model.LastName
+        </div>
+        <div class="card-date">Geburtstag: @Model.BirthDate.ToShortDateString()</div>
+        <div class="card-date">@Model.Address.Zip: @Model.Address.City</div>
+        <div class="card-date">@Model.Address.Street @Model.Address.No</div>
+        <div class="card-date">@Model.Address.FedState.FedName</div>
+   </div>
+</div>

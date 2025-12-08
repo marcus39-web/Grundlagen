@@ -1,0 +1,15 @@
+﻿@model IEnumerable<Grundlagen.Models.PersonModel>
+@{
+    ViewData["Title"] = "Personenliste";
+}
+
+<div class="page-title">
+    <PageTitle>Personen</PageTitle>
+</div>
+
+<div class="place-columns">
+    @foreach (var item in Model)
+    {
+       @Html.Partial("_PersonCard", item);
+    }
+</div>

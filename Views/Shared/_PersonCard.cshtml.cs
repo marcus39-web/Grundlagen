@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Grundlagen.Views.Shared
 {
-    public class _PlaceCardModel : PageModel
+    public class PersonCardModel : PageModel
     {
         public void OnGet()
         {

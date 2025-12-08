@@ -1,6 +1,6 @@
-﻿namespace C_Grundlagen.Models
+﻿namespace Grundlagen.Models
 {
-    public class PlacesModels
+    public class PlacesModel
     {
         public string Description { get; set; }
         public string ImageUrl { get; set; }

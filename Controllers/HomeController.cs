@@ -1,9 +1,9 @@
-using C_Grundlagen.Models;
+using Grundlagen.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using System.Text.Json;
 
-namespace C_Grundlagen.Controllers
+namespace Grundlagen.Controllers
 {
     public class HomeController : Controller
     {
@@ -16,10 +16,18 @@ namespace C_Grundlagen.Controllers
 
         public IActionResult Index()
         {
-            string oathData = "Data/collection.json";
-            var jsonFile = System.IO:File.OpenRead(pathData);
-            var items = JsonSerializer.Deserializer<List<PlacesModels>>(jonsonFile);
-            return View();
+            string pathData = "Data/collection.json";
+            var jsonFile = System.IO.File.OpenRead(pathData);
+            var items = JsonSerializer.Deserialize<List<PlacesModel>>(jsonFile);
+            return View(items);
+        }
+
+        public IActionResult Person()
+        {
+            string pathData = "Data/adresses.json";
+            var jsonFile = System.IO.File.OpenRead(pathData);
+            var items = JsonSerializer.Deserialize<List<PersonModel>>(jsonFile);
+            return View(items);
         }
 
         public IActionResult Privacy()
