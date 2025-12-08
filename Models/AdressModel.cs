@@ -7,7 +7,7 @@
         public string Zip { get; set; } = "";
         public string Street { get; set; } = "";
         public string No { get; set; } = "";
-        public int FedId { get; set; }
+        public int? FedId { get; set; }
 
         public virtual FedStateModel FedState { get; set; }
     }
