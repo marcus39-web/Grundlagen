@@ -1,0 +1,15 @@
+﻿@model IEnummerable<WebSite.Models.PlacesModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+
+<div class="place-colums">
+    @foreach (var item in Model)
+    {
+        Html.Partial("_PlaceCard", item);    
+    }
+</div>
