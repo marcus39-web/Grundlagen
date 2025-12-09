@@ -8,6 +8,6 @@
         <div class="card-date">Geburtstag: @Model.BirthDate.ToShortDateString()</div>
         <div class="card-date">@Model.Address.Zip: @Model.Address.City</div>
         <div class="card-date">@Model.Address.Street @Model.Address.No</div>
-        <div class="card-date">@Model.Address.FedState?.FedName</div>
+        <div class="card-date">@Model.Address.FedState.FedName</div>
    </div>
 </div>
