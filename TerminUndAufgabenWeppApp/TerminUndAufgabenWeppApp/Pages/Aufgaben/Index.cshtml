@@ -1,0 +1,32 @@
+﻿@page
+@model TerminUndAufgabenWeppApp.Pages.Aufgaben.IndexModel
+
+<h2>Aufgaben</h2>
+<a asp-page="Create" class="btn btn-primary mb-2">Neue Aufgabe anlegen</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Titel</th>
+            <th>Beschreibung</th>
+            <th>Von</th>
+            <th>Bis</th>
+            <th>Aktionen</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var a in Model.AufgabenListe)
+    {
+        <tr>
+            <td>@a.Titel</td>
+            <td>@a.Beschreibung</td>
+            <td>@a.ZuErledigenVon.ToShortDateString()</td>
+            <td>@a.ZuErledigenBis.ToShortDateString()</td>
+            <td>
+                <a asp-page="Edit" asp-route-id="@a.Id" class="btn btn-sm btn-warning">Bearbeiten</a>
+                <a asp-page="Delete" asp-route-id="@a.Id" class="btn btn-sm btn-danger">Löschen</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

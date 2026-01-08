@@ -1,0 +1,32 @@
+@page
+@model TerminUndAufgabenWeppApp.Pages.Kategorien.IndexModel
+
+<h2>Kategorien</h2>
+<a asp-page="Create" class="btn btn-primary mb-2">Neue Kategorie anlegen</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Titel</th>
+            <th>Beschreibung</th>
+            <th>Farbe</th>
+            <th>Aktionen</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var k in Model.KategorienListe)
+    {
+        <tr>
+            <td>@k.Titel</td>
+            <td>@k.Beschreibung</td>
+            <td>
+                <span style="background-color:@k.Farbcode;padding:4px 12px;border-radius:4px;">@k.Farbcode</span>
+            </td>
+            <td>
+                <a asp-page="Edit" asp-route-id="@k.Id" class="btn btn-sm btn-warning">Bearbeiten</a>
+                <a asp-page="Delete" asp-route-id="@k.Id" class="btn btn-sm btn-danger">Löschen</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

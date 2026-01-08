@@ -1,0 +1,9 @@
+@page "{id:int}"
+@model TerminUndAufgabenWeppApp.Pages.Termine.DeleteModel
+
+<h2>Termin löschen</h2>
+<p>Möchten Sie den Termin <strong>@Model.Termin.Titel</strong> wirklich löschen?</p>
+<form method="post">
+    <button type="submit" class="btn btn-danger">Löschen</button>
+    <a asp-page="Index" class="btn btn-secondary">Abbrechen</a>
+</form>

@@ -1,0 +1,23 @@
+@page
+@model TerminUndAufgabenWeppApp.Pages.Aufgaben.CreateModel
+
+<h2>Aufgabe erstellen</h2>
+<form method="post">
+    <div class="mb-3">
+        <label asp-for="Aufgabe.Titel" class="form-label"></label>
+        <input asp-for="Aufgabe.Titel" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Aufgabe.Beschreibung" class="form-label"></label>
+        <input asp-for="Aufgabe.Beschreibung" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Aufgabe.ZuErledigenVon" class="form-label"></label>
+        <input asp-for="Aufgabe.ZuErledigenVon" class="form-control" type="date" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Aufgabe.ZuErledigenBis" class="form-label"></label>
+        <input asp-for="Aufgabe.ZuErledigenBis" class="form-control" type="date" />
+    </div>
+    <button type="submit" class="btn btn-success">Speichern</button>
+</form>

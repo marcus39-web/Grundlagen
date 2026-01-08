@@ -1,0 +1,9 @@
+@page "/dein-pfad"
+@model TerminUndAufgabenWeppApp.Pages.Aufgaben.DeleteModel
+
+<h2>Aufgabe löschen</h2>
+<p>Möchten Sie die Aufgabe <strong>@Model.Aufgabe.Titel</strong> wirklich löschen?</p>
+<form method="post">
+    <button type="submit" class="btn btn-danger">Löschen</button>
+    <a asp-page="Index" class="btn btn-secondary">Abbrechen</a>
+</form>

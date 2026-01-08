@@ -1,0 +1,29 @@
+@page
+@model TerminUndAufgabenWeppApp.Pages.Kategorien.CreateModel
+
+<h2>Kategorie erstellen</h2>
+<form method="post">
+    <div class="mb-3">
+        <label asp-for="Kategorie.Titel" class="form-label"></label>
+        <input asp-for="Kategorie.Titel" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Kategorie.Beschreibung" class="form-label"></label>
+        <input asp-for="Kategorie.Beschreibung" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Kategorie.Farbcode" class="form-label"></label>
+        <input asp-for="Kategorie.Farbcode" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-success">Speichern</button>
+</form>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <div>@error.ErrorMessage</div>
+        }
+    </div>
+}

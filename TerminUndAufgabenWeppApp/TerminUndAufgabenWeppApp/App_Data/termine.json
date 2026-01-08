@@ -1,0 +1,56 @@
+[
+  {
+    "Id": 1,
+    "Titel": "Mittag",
+    "Starttermin": "2026-01-08T11:15:00",
+    "DauerInMinuten": 45,
+    "Ort": "M\u00FCnchen",
+    "Kontaktperson": "Marcus",
+    "Beschreibung": "Mittagspause",
+    "Kategorie": null,
+    "Farbcode": "#dc3545"
+  },
+  {
+    "Id": 2,
+    "Titel": "Guten Morgen",
+    "Starttermin": "2026-01-08T08:00:00",
+    "DauerInMinuten": 40,
+    "Ort": "Legefeld",
+    "Kontaktperson": "Marcus",
+    "Beschreibung": "Aufwecken",
+    "Kategorie": null,
+    "Farbcode": "#28a745"
+  },
+  {
+    "Id": 4,
+    "Titel": "\u00DCbung",
+    "Starttermin": "0202-02-15T23:00:00",
+    "DauerInMinuten": 50,
+    "Ort": "Lindau",
+    "Kontaktperson": "Peter",
+    "Beschreibung": "Von A-Z",
+    "Kategorie": {
+      "Id": 3,
+      "Titel": "React",
+      "Beschreibung": "Das Beste",
+      "Farbcode": "Lila"
+    },
+    "Farbcode": "#28a745"
+  },
+  {
+    "Id": 5,
+    "Titel": "Hausaufgabe",
+    "Starttermin": "2026-01-08T15:00:00",
+    "DauerInMinuten": 60,
+    "Ort": "Glattbach",
+    "Kontaktperson": "Marcus",
+    "Beschreibung": "Wichtig",
+    "Kategorie": {
+      "Id": 1,
+      "Titel": "C#",
+      "Beschreibung": "Grundlagen erwerben",
+      "Farbcode": "rot"
+    },
+    "Farbcode": "#28a745"
+  }
+]
