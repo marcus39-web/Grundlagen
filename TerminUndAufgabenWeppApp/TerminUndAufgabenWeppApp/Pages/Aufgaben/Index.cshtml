@@ -18,6 +18,10 @@
     @foreach (var a in Model.AufgabenListe)
     {
         <tr>
+                <td>
+                    <span style="display:inline-block;width:16px;height:16px;background-color:@a.Farbcode;border-radius:3px;margin-right:8px;"></span>
+                    @a.Titel
+                </td>
             <td>@a.Titel</td>
             <td>@a.Beschreibung</td>
             <td>@a.ZuErledigenVon.ToShortDateString()</td>

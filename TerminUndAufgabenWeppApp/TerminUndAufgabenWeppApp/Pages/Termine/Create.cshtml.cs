@@ -39,6 +39,11 @@ namespace TerminUndAufgabenWeppApp.Pages.Termine
             var kategorien = KategorienDataStore.Load();
             Termin.Kategorie = kategorien.FirstOrDefault(k => k.Id == KategorieId);
 
+            if (Termin.Kategorie != null)
+            {
+                Termin.Farbcode = Termin.Kategorie.Farbcode;
+            }
+
             termine.Add(Termin);
             TermineDataStore.Save(termine);
 

@@ -7,6 +7,7 @@
         public string Beschreibung { get; set; } = string.Empty;
         public DateTime ZuErledigenVon { get; set; }
         public DateTime ZuErledigenBis { get; set; }
-        // weitere Properties nach Bedarf
+        public string Farbcode { get; set; } = "#28a745"; // grün 
+      
     }
 }

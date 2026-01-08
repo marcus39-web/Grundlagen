@@ -8,7 +8,7 @@
     "Kontaktperson": "Marcus",
     "Beschreibung": "Mittagspause",
     "Kategorie": null,
-    "Farbcode": "#dc3545"
+    "Farbcode": "#28a745"
   },
   {
     "Id": 2,
@@ -19,23 +19,18 @@
     "Kontaktperson": "Marcus",
     "Beschreibung": "Aufwecken",
     "Kategorie": null,
-    "Farbcode": "#28a745"
+    "Farbcode": "#ffc107"
   },
   {
     "Id": 4,
     "Titel": "\u00DCbung",
     "Starttermin": "0202-02-15T23:00:00",
-    "DauerInMinuten": 50,
+    "DauerInMinuten": 56,
     "Ort": "Lindau",
     "Kontaktperson": "Peter",
     "Beschreibung": "Von A-Z",
-    "Kategorie": {
-      "Id": 3,
-      "Titel": "React",
-      "Beschreibung": "Das Beste",
-      "Farbcode": "Lila"
-    },
-    "Farbcode": "#28a745"
+    "Kategorie": null,
+    "Farbcode": "#ffc107"
   },
   {
     "Id": 5,
@@ -45,12 +40,7 @@
     "Ort": "Glattbach",
     "Kontaktperson": "Marcus",
     "Beschreibung": "Wichtig",
-    "Kategorie": {
-      "Id": 1,
-      "Titel": "C#",
-      "Beschreibung": "Grundlagen erwerben",
-      "Farbcode": "rot"
-    },
-    "Farbcode": "#28a745"
+    "Kategorie": null,
+    "Farbcode": "#dc3545"
   }
 ]

@@ -21,6 +21,10 @@
     @foreach (var t in Model.TermineListe)
     {
         <tr>
+                <td>
+                    <span style="display:inline-block;width:16px;height:16px;background-color:@t.Farbcode;border-radius:3px;margin-right:8px;"></span>
+                    @t.Titel
+                </td>
             <td>@t.Titel</td>
             <td>@t.Starttermin.ToString("g")</td>
             <td>@t.DauerInMinuten</td>

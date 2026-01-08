@@ -2,7 +2,22 @@
 @model TerminUndAufgabenWeppApp.Pages.Aufgaben.CreateModel
 
 <h2>Aufgabe erstellen</h2>
+
+@if (Model.Aufgabe != null)
+{
+    <div style="height: 24px; width: 100%; background-color:@Model.Aufgabe.Farbcode; border-radius: 4px; margin-bottom: 16px;"></div>
+}
+
 <form method="post">
+    <input type="hidden" asp-for="Aufgabe.Id" />
+    <div class="mb-3">
+        <label asp-for="Aufgabe.Farbcode" class="form-label">Farbe</label>
+        <select asp-for="Aufgabe.Farbcode" class="form-control" style="width: 120px;">
+            <option value="#28a745" style="background-color:#28a745;color:white;">Grün</option>
+            <option value="#ffc107" style="background-color:#ffc107;color:black;">Gelb</option>
+            <option value="#dc3545" style="background-color:#dc3545;color:white;">Rot</option>
+        </select>
+    </div>
     <div class="mb-3">
         <label asp-for="Aufgabe.Titel" class="form-label"></label>
         <input asp-for="Aufgabe.Titel" class="form-control" />
