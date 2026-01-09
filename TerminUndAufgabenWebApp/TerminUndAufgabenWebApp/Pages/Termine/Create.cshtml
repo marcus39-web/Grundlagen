@@ -1,0 +1,53 @@
+﻿@page
+@model TerminUndAufgabenWeppApp.Pages.Termine.CreateModel
+
+<h2>Neuen Termin anlegen</h2>
+<form method="post">
+    <div class="mb-3">
+        <label asp-for="Termin.Farbcode" class="form-label">Farbe</label>
+        <select asp-for="Termin.Farbcode" class="form-control" style="width: 120px;">
+            <option value="#28a745" style="background-color:#28a745;color:white;">Grün</option>
+            <option value="#ffc107" style="background-color:#ffc107;color:black;">Gelb</option>
+            <option value="#dc3545" style="background-color:#dc3545;color:white;">Rot</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Termin.Titel"></label>
+        <input asp-for="Termin.Titel" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Termin.Starttermin"></label>
+        <input asp-for="Termin.Starttermin" class="form-control" type="datetime-local" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Termin.DauerInMinuten"></label>
+        <input asp-for="Termin.DauerInMinuten" class="form-control" type="number" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Termin.Ort"></label>
+        <input asp-for="Termin.Ort" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Termin.Kontaktperson"></label>
+        <input asp-for="Termin.Kontaktperson" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Termin.Beschreibung"></label>
+        <input asp-for="Termin.Beschreibung" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="KategorieId" class="form-label"></label>
+        <select asp-for="KategorieId" class="form-control" asp-items="Model.KategorienListe"></select>
+    </div>
+    <button type="submit" class="btn btn-success">Speichern</button>
+</form>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <div>@error.ErrorMessage</div>
+        }
+    </div>
+}

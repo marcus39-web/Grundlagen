@@ -1,0 +1,188 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+.main-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #14532d 0%, #a8ff78 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.headline {
+    font-size: 9rem; 
+    font-weight: bold;
+    margin-bottom: 2rem;
+    background: linear-gradient(270deg, #ff0000, #ff9900, #ffff00, #33ff00, #00ffff, #3300ff, #ff00cc, #ff0000);
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 8px 24px rgba(0,0,0,0.2), 0 1.5px 0 #14532d;
+    animation: rainbow-flow 4s linear infinite;
+    z-index: 2;
+}
+
+@keyframes rainbow-flow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.logo-cloud {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.logo-cloud img {
+    position: absolute;
+    width: 70px;
+    opacity: 0.85;
+}
+
+.logo-php { animation: orbit1 12s linear infinite; }
+.logo-mysql { animation: orbit2 14s linear infinite; }
+.logo-python { animation: orbit3 16s linear infinite; }
+.logo-java { animation: orbit4 18s linear infinite; }
+.logo-js { animation: orbit5 13s linear infinite; }
+.logo-vs { animation: orbit6 15s linear infinite; }
+.logo-html { animation: orbit7 17s linear infinite; }
+.logo-css { animation: orbit8 19s linear infinite; }
+.logo-vscode { animation: orbit9 20s linear infinite; }
+
+@keyframes orbit1 {
+    0%   { left: 10%; top: 10%; }
+    25%  { left: 80%; top: 15%; }
+    50%  { left: 70%; top: 80%; }
+    75%  { left: 20%; top: 70%; }
+    100% { left: 10%; top: 10%; }
+}
+@keyframes orbit2 {
+    0%   { left: 80%; top: 15%; }
+    25%  { left: 70%; top: 80%; }
+    50%  { left: 20%; top: 70%; }
+    75%  { left: 10%; top: 10%; }
+    100% { left: 80%; top: 15%; }
+}
+@keyframes orbit3 {
+    0%   { left: 20%; top: 70%; }
+    25%  { left: 10%; top: 10%; }
+    50%  { left: 80%; top: 15%; }
+    75%  { left: 70%; top: 80%; }
+    100% { left: 20%; top: 70%; }
+}
+@keyframes orbit4 {
+    0%   { left: 70%; top: 80%; }
+    25%  { left: 20%; top: 70%; }
+    50%  { left: 10%; top: 10%; }
+    75%  { left: 80%; top: 15%; }
+    100% { left: 70%; top: 80%; }
+}
+@keyframes orbit5 {
+    0%   { left: 50%; top: 5%; }
+    25%  { left: 85%; top: 60%; }
+    50%  { left: 40%; top: 85%; }
+    75%  { left: 5%; top: 60%; }
+    100% { left: 50%; top: 5%; }
+}
+@keyframes orbit6 {
+    0%   { left: 5%; top: 60%; }
+    25%  { left: 60%; top: 30%; }
+    50%  { left: 85%; top: 60%; }
+    75%  { left: 40%; top: 85%; }
+    100% { left: 5%; top: 60%; }
+}
+@keyframes orbit7 {
+    0%   { left: 85%; top: 60%; }
+    25%  { left: 40%; top: 85%; }
+    50%  { left: 5%; top: 60%; }
+    75%  { left: 60%; top: 30%; }
+    100% { left: 85%; top: 60%; }
+}
+@keyframes orbit8 {
+    0%   { left: 40%; top: 85%; }
+    25%  { left: 60%; top: 30%; }
+    50%  { left: 85%; top: 60%; }
+    75%  { left: 5%; top: 60%; }
+    100% { left: 40%; top: 85%; }
+}
+@keyframes orbit9 {
+    0%   { left: 60%; top: 30%; }
+    25%  { left: 5%; top: 60%; }
+    50%  { left: 40%; top: 85%; }
+    75%  { left: 85%; top: 60%; }
+    100% { left: 60%; top: 30%; }
+}
+
+.meta-info {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    color: #14532d;
+    background: #eafff3;
+    padding: 1.2rem 2.5rem;
+    border-radius: 2rem;
+    box-shadow: 0 4px 24px rgba(20,83,45,0.10);
+    text-align: center;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    z-index: 2;
+    transition: box-shadow 0.2s;
+}
+
+.meta-info:hover {
+    box-shadow: 0 8px 32px rgba(20,83,45,0.18);
+}
+
+
+.footer-info {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    color: #14532d;
+    font-size: 0.95rem;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    background: none;
+    padding: 0.5rem 0 0.7rem 0;
+    opacity: 0.85;
+    z-index: 100;
+    text-transform: lowercase;
+}

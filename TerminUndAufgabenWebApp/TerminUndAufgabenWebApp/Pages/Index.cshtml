@@ -1,0 +1,32 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Terminplaner";
+    var now = DateTime.Now;
+    var name = "Marcus Reiser Kff IT 3";
+}
+
+<div class="main-container">
+    <div class="logo-cloud">
+        <img class="logo-php" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" />
+        <img class="logo-mysql" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
+        <img class="logo-python" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" />
+        <img class="logo-java" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
+        <img class="logo-js" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" />
+        <img class="logo-vs" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg" alt="Visual Studio" />
+        <img class="logo-html" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" />
+        <img class="logo-css" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" />
+        <img class="logo-vscode" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code" />
+    </div>
+    <h1 class="headline">Terminplaner</h1>
+    <div class="corner-info">
+        @* @now.ToString("dd.MM.yyyy HH:mm")<br />
+        Marcus Reiser Kff IT 3 *@
+    </div>
+</div>
+
+<footer class="footer-info">
+    @now.ToString("dd.MM.yyyy HH:mm") - Marcus Reiser Kff IT 3
+</footer>
+
+

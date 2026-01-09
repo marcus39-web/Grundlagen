@@ -1,0 +1,20 @@
+@page "{id:int}"
+@model TerminUndAufgabenWeppApp.Pages.Kategorien.EditModel
+
+<h2>Kategorie bearbeiten</h2>
+<form method="post">
+    <input type="hidden" asp-for="Kategorie.Id" />
+    <div class="mb-3">
+        <label asp-for="Kategorie.Titel" class="form-label"></label>
+        <input asp-for="Kategorie.Titel" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Kategorie.Beschreibung" class="form-label"></label>
+        <input asp-for="Kategorie.Beschreibung" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Kategorie.Farbcode" class="form-label"></label>
+        <input asp-for="Kategorie.Farbcode" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-success">Speichern</button>
+</form>

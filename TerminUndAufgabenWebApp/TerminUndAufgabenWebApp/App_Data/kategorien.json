@@ -1,0 +1,26 @@
+[
+  {
+    "Id": 1,
+    "Titel": "C#",
+    "Beschreibung": "Grundlagen erwerben",
+    "Farbcode": "rot"
+  },
+  {
+    "Id": 2,
+    "Titel": "PHP-Grundkurs",
+    "Beschreibung": "Das Alphabet der Programmierung",
+    "Farbcode": "rot"
+  },
+  {
+    "Id": 3,
+    "Titel": "React",
+    "Beschreibung": "Das Beste",
+    "Farbcode": "Lila"
+  },
+  {
+    "Id": 4,
+    "Titel": "Pyton",
+    "Beschreibung": "Crasskurs",
+    "Farbcode": "gelb"
+  }
+]
