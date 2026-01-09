@@ -3,24 +3,36 @@
     "Id": 1,
     "Titel": "C#",
     "Beschreibung": "Grundlagen erwerben",
-    "Farbcode": "rot"
-  },
-  {
-    "Id": 2,
-    "Titel": "PHP-Grundkurs",
-    "Beschreibung": "Das Alphabet der Programmierung",
-    "Farbcode": "rot"
+    "Farbcode": null
   },
   {
     "Id": 3,
     "Titel": "React",
-    "Beschreibung": "Das Beste",
-    "Farbcode": "Lila"
+    "Beschreibung": "Komponentenarchitektur",
+    "Farbcode": null
   },
   {
     "Id": 4,
     "Titel": "Pyton",
-    "Beschreibung": "Crasskurs",
-    "Farbcode": "gelb"
+    "Beschreibung": "Crashcurs",
+    "Farbcode": null
+  },
+  {
+    "Id": 5,
+    "Titel": "JavaScript",
+    "Beschreibung": "Dynamische Webanwendung",
+    "Farbcode": null
+  },
+  {
+    "Id": 6,
+    "Titel": "PHP 8 ",
+    "Beschreibung": "Grundlagen",
+    "Farbcode": null
+  },
+  {
+    "Id": 7,
+    "Titel": "MySQL",
+    "Beschreibung": "Datenbank",
+    "Farbcode": null
   }
 ]

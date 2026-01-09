@@ -1,46 +1,35 @@
 [
   {
     "Id": 1,
-    "Titel": "Mittag",
+    "Titel": "Strings",
     "Starttermin": "2026-01-08T11:15:00",
     "DauerInMinuten": 45,
     "Ort": "M\u00FCnchen",
     "Kontaktperson": "Marcus",
-    "Beschreibung": "Mittagspause",
-    "Kategorie": null,
+    "Beschreibung": "\u00FCben",
+    "KategorieId": 1,
     "Farbcode": "#28a745"
   },
   {
     "Id": 2,
-    "Titel": "Guten Morgen",
+    "Titel": "Projekt K\u00FCche",
     "Starttermin": "2026-01-08T08:00:00",
-    "DauerInMinuten": 40,
+    "DauerInMinuten": 120,
     "Ort": "Legefeld",
     "Kontaktperson": "Marcus",
-    "Beschreibung": "Aufwecken",
-    "Kategorie": null,
+    "Beschreibung": "Projektarbeit",
+    "KategorieId": 5,
     "Farbcode": "#ffc107"
   },
   {
     "Id": 4,
-    "Titel": "\u00DCbung",
+    "Titel": "Einarbeitung",
     "Starttermin": "0202-02-15T23:00:00",
-    "DauerInMinuten": 56,
+    "DauerInMinuten": 240,
     "Ort": "Lindau",
     "Kontaktperson": "Peter",
     "Beschreibung": "Von A-Z",
-    "Kategorie": null,
-    "Farbcode": "#ffc107"
-  },
-  {
-    "Id": 5,
-    "Titel": "Hausaufgabe",
-    "Starttermin": "2026-01-08T15:00:00",
-    "DauerInMinuten": 60,
-    "Ort": "Glattbach",
-    "Kontaktperson": "Marcus",
-    "Beschreibung": "Wichtig",
-    "Kategorie": null,
+    "KategorieId": 4,
     "Farbcode": "#dc3545"
   }
 ]

@@ -9,6 +9,7 @@
 }
 
 <form method="post">
+    <div asp-validation-summary="ModelOnly"></div>
     <input type="hidden" asp-for="Aufgabe.Id" />
     <div class="mb-3">
         <label asp-for="Aufgabe.Farbcode" class="form-label">Farbe</label>
@@ -34,5 +35,27 @@
         <label asp-for="Aufgabe.ZuErledigenBis" class="form-label"></label>
         <input asp-for="Aufgabe.ZuErledigenBis" class="form-control" type="date" />
     </div>
+    <div class="mb-3">
+        <label asp-for="Aufgabe.Status" class="form-label"></label>
+        <select asp-for="Aufgabe.Status" class="form-control">
+            <option value="offen">offen</option>
+            <option value="in Bearbeitung">in Bearbeitung</option>
+            <option value="erledigt">erledigt</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Aufgabe.KategorieId" class="form-label">Kategorie</label>
+        <select asp-for="Aufgabe.KategorieId" class="form-control">
+            <option value="">Bitte wählen...</option>
+            @foreach (var k in Model.Kategorien)
+            {
+                <option value="@k.Id">@k.Titel</option>
+            }
+        </select>
+    </div>
     <button type="submit" class="btn btn-success">Speichern</button>
+   
 </form>
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

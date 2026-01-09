@@ -11,7 +11,7 @@ namespace TerminUndAufgabenWeppApp.Pages
         public string Ort { get; set; } = string.Empty;
         public string Kontaktperson { get; set; } = string.Empty;
         public string Beschreibung { get; set; } = string.Empty;
-        public Kategorie? Kategorie { get; set; }
+        public int KategorieId { get; set; }
         public string Farbcode { get; set; } = "#28a745"; //grün
        
      

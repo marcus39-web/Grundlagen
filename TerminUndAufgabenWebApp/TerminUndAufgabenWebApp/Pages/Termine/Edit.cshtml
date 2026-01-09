@@ -42,6 +42,16 @@
         <label asp-for="Termin.Beschreibung"></label>
         <input asp-for="Termin.Beschreibung" class="form-control" />
     </div>
+    <div class="mb-3">
+        <label asp-for="Termin.KategorieId" class="form-label">Kategorie</label>
+        <select asp-for="Termin.KategorieId" class="form-control">
+            <option value="">Bitte wählen...</option>
+            @foreach (var k in Model.Kategorien)
+            {
+                <option value="@k.Id">@k.Titel</option>
+            }
+        </select>
+    </div>
    
     <button type="submit" class="btn btn-success">Speichern</button>
 </form>

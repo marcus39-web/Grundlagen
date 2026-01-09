@@ -3,24 +3,30 @@
     "Id": 1,
     "Titel": "Projektarbeit",
     "Beschreibung": "C# Website zur Darstellung von Terminen",
+    "Farbcode": "#28a745",
     "ZuErledigenVon": "2026-01-07T00:00:00",
     "ZuErledigenBis": "2026-01-12T00:00:00",
-    "Farbcode": "#28a745"
+    "Status": "in Bearbeitung",
+    "KategorieId": 0
   },
   {
     "Id": 2,
     "Titel": "Hausarbeit",
     "Beschreibung": "lernen",
+    "Farbcode": "#ffc107",
     "ZuErledigenVon": "2026-01-20T00:00:00",
     "ZuErledigenBis": "2026-02-02T00:00:00",
-    "Farbcode": "#ffc107"
+    "Status": "offen",
+    "KategorieId": 0
   },
   {
     "Id": 3,
     "Titel": "Razor Pages \u00FCberarbeiten",
     "Beschreibung": "Projektarbeit",
+    "Farbcode": "#dc3545",
     "ZuErledigenVon": "2026-01-08T00:00:00",
     "ZuErledigenBis": "2026-01-09T00:00:00",
-    "Farbcode": "#dc3545"
+    "Status": "erledigt",
+    "KategorieId": 0
   }
 ]

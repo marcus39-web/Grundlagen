@@ -9,6 +9,8 @@
         <tr>
             <th>Titel</th>
             <th>Beschreibung</th>
+            <th>Kategorie</th>
+            <th>Status</th>
             <th>Von</th>
             <th>Bis</th>
             <th>Aktionen</th>
@@ -18,14 +20,21 @@
     @foreach (var a in Model.AufgabenListe)
     {
         <tr>
-                <td>
-                    <span style="display:inline-block;width:16px;height:16px;background-color:@a.Farbcode;border-radius:3px;margin-right:8px;"></span>
-                    @a.Titel
-                </td>
-            <td>@a.Titel</td>
+            <td>
+                    <span style="display:inline-block;width:16px;height:16px;
+                                 background-color:@(
+                                 a.Status == "erledigt" ? "#28a745" :
+                                 a.Status == "in Bearbeitung" ? "#ffc107" :
+                                             "#dc3545");
+                                 border-radius:3px;margin-right:8px;">
+                    </span>
+                @a.Titel
+            </td>
             <td>@a.Beschreibung</td>
-            <td>@a.ZuErledigenVon.ToShortDateString()</td>
-            <td>@a.ZuErledigenBis.ToShortDateString()</td>
+            <td>@a.KategorieTitel</td>
+            <td>@a.Status</td>
+            <td>@(a.ZuErledigenVon.HasValue? a.ZuErledigenVon.Value.ToShortDateString() : "")</td>
+            <td>@(a.ZuErledigenBis.HasValue? a.ZuErledigenBis.Value.ToShortDateString() : "")</td>
             <td>
                 <a asp-page="Edit" asp-route-id="@a.Id" class="btn btn-sm btn-warning">Bearbeiten</a>
                 <a asp-page="Delete" asp-route-id="@a.Id" class="btn btn-sm btn-danger">Löschen</a>

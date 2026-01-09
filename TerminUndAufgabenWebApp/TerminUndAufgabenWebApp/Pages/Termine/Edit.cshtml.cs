@@ -15,21 +15,18 @@ namespace TerminUndAufgabenWeppApp.Pages.Termine
         [Display(Name = "Kategorie")]
         public int KategorieId { get; set; }
         public List<SelectListItem> KategorienListe { get; set; } = new();
+        public List<Kategorie> Kategorien { get; set; } = new();
 
         public IActionResult OnGet(int id)
         {
-            // Kategorien für das Dropdown laden
-            var kategorien = KategorienDataStore.Load();
-            KategorienListe = kategorien
-                .Select(k => new SelectListItem { Value = k.Id.ToString(), Text = k.Titel })
-                .ToList();
+            Kategorien = KategorienDataStore.Load();
 
             var termine = TermineDataStore.Load();
             var termin = termine.FirstOrDefault(t => t.Id == id);
             if (termin == null)
                 return RedirectToPage("Index");
             Termin = termin!;
-            KategorieId = termin.Kategorie?.Id ?? 0; // KategorieId für das Dropdown setzen
+            KategorieId = Termin.KategorieId; // KategorieId für das Dropdown setzen
             return Page();
         }
 
@@ -37,11 +34,7 @@ namespace TerminUndAufgabenWeppApp.Pages.Termine
         {
             if (!ModelState.IsValid)
             {
-                // KategorienListe erneut befüllen, falls Validierung fehlschlägt
-                var kategorien = KategorienDataStore.Load();
-                KategorienListe = kategorien
-                    .Select(k => new SelectListItem { Value = k.Id.ToString(), Text = k.Titel })
-                    .ToList();
+                Kategorien = KategorienDataStore.Load();
                 return Page();
             }
 
@@ -51,12 +44,11 @@ namespace TerminUndAufgabenWeppApp.Pages.Termine
             {
                 // Kategorie zuweisen
                 var kategorien = KategorienDataStore.Load();
-                Termin.Kategorie = kategorien.FirstOrDefault(k => k.Id == KategorieId);
+                Termin.KategorieId = Termin.KategorieId; // (wird durch das Formular gebunden)
 
-                if (Termin.Kategorie != null)
-                {
-                    Termin.Farbcode = Termin.Kategorie.Farbcode;
-                }
+                var kategorie = Kategorien.FirstOrDefault(k => k.Id == Termin.KategorieId);
+                if (kategorie != null)
+                    Termin.Farbcode = kategorie.Farbcode;
 
                 termine[index] = Termin;
                 TermineDataStore.Save(termine);

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using System.Linq;
+using TerminUndAufgabenWeppApp.Pages.Kategorien; // Importiere den Namespace für Kategorien
 
 namespace TerminUndAufgabenWeppApp.Pages.Aufgaben
 {
@@ -8,6 +8,14 @@ namespace TerminUndAufgabenWeppApp.Pages.Aufgaben
     {
         [BindProperty]
         public Aufgabe Aufgabe { get; set; } = new();
+
+        public List<Kategorie> Kategorien { get; set; } = new();
+
+        public void OnGet()
+        {
+            // Hier solltest du die Kategorien aus der zentralen Quelle laden!
+            Kategorien = KategorienDataStore.Load();
+        }
 
         public IActionResult OnPost()
         {

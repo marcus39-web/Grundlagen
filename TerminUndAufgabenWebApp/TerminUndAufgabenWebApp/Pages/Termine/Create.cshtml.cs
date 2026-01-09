@@ -15,13 +15,12 @@ namespace TerminUndAufgabenWeppApp.Pages.Termine
         public int KategorieId { get; set; }
 
         public List<SelectListItem> KategorienListe { get; set; } = new();
-
-
-  
+        public List<Kategorie> Kategorien { get; set; } = new();
 
 
         public void OnGet()
         {
+            Kategorien = KategorienDataStore.Load();
             var kategorien = KategorienDataStore.Load();
             KategorienListe = kategorien
                 .Select(k => new SelectListItem { Value = k.Id.ToString(), Text = k.Titel })
@@ -31,18 +30,18 @@ namespace TerminUndAufgabenWeppApp.Pages.Termine
         public IActionResult OnPost()
         {
             if (!ModelState.IsValid)
+            {
+                Kategorien = KategorienDataStore.Load();
                 return Page();
+            }
 
             var termine = TermineDataStore.Load();
             Termin.Id = termine.Any() ? termine.Max(t => t.Id) + 1 : 1;
 
             var kategorien = KategorienDataStore.Load();
-            Termin.Kategorie = kategorien.FirstOrDefault(k => k.Id == KategorieId);
-
-            if (Termin.Kategorie != null)
-            {
-                Termin.Farbcode = Termin.Kategorie.Farbcode;
-            }
+            var kategorie = Kategorien.FirstOrDefault(k => k.Id == Termin.KategorieId);
+            if (kategorie != null)
+                Termin.Farbcode = kategorie.Farbcode;
 
             termine.Add(Termin);
             TermineDataStore.Save(termine);
